@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "typeUsers")
 public class Type_user {
-	
+		  
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idType;
@@ -25,7 +25,7 @@ public class Type_user {
 	@ManyToMany
 	@JoinTable(name="typeUsers_users",
     joinColumns= @JoinColumn(name="idType",referencedColumnName = "idType"),
-    inverseJoinColumns= @JoinColumn(name="idUser",referencedColumnName = "id"))  
+    inverseJoinColumns= @JoinColumn(name="idUser",referencedColumnName = "id")) 
 	private List<NewUsers> users = new ArrayList<>();
 
 	public Type_user() {
